@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/4eacb8af7b.js" crossorigin="anonymous"></script>
+    <title>test file for creating website</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    }
+    .banner {
+            width:100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(17, 19, 19, 0.837),rgba(6, 51, 50, 0.618)),url(ironman.jpg);
+            background-size: cover;
+            background-position: center;
+        
+    }
+    .navbar{
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+    }
+    .logo{
+        width: 250px;
+        cursor: pointer;
+    }
+    .navbar ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    .navbar ul li::after{
+        content: '';
+        height: 5px;
+        width: 0;
+        background: #009688;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+        
+       
+    }
+    .navbar ul li:hover::after{
+       width: 100%;
+    }
+    .content{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50);
+        text-align: center;
+        color: #fff;
+    }
+    .content h1{
+        font-size: 70px;
+        margin-top: 80px;
+    }
+    .content p{
+        margin: 20px auto;
+        font-weight: 100;
+        line-height: 25px;
+    }
+    button{
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid  #009688;
+        background: transparent;
+        color: #ffffff;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    span{
+  
+        height: 100%;
+        width: 100%;
+        background-color: #078f8f;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    
+   button:hover span{
+      width: 100%;
+    
+   }
+   button:hover{
+    border: none;
+   }
+   /*--feature--*/
+   #feature{
+    width: 100%;
+    padding: 70px 0;
+    background-color: #070707;
+    background-image: linear-gradient(rgb(59, 205, 205,0.2),rgb(5, 5, 5,0.5),rgba(65, 186, 182,0.2 ));
+   }
+   .title-text{
+    text-align: center;
+    padding-bottom: 70px;
+    color: #fff;
+   }
+   
+   .title-text p{
+    margin: auto;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+   }
+   .title-text p::after{
+       content: '';
+       width: 50px;
+       height: 35px;
+       background: linear-gradient(#019587,#171515);
+       position: absolute;
+       top: -20px;
+       left: 0%;
+       z-index: -1;
+       transform: rotate(10deg);
+       border-top-left-radius: 35px;
+       border-bottom-right-radius: 35px;
+       font-size: 50px;
+   }
+   .title-text h1{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   .feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    text-align: center;
+   }
+   .features{
+      flex-basis: 50%;
+      color: #fbfafa;
+   }
+   .features-img{
+    flex-basis: 50%;
+    margin: auto;
+    cursor: pointer;
+   }
+   .features-img img{animation: pulse 3s infinite ;}
+    @keyframes pulse{
+    
+    0%,100% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+   }
+  
+   .features h1{
+      text-align: left;
+      margin-bottom: 10px;
+      font-weight: 100;
+      color: #009688;
+      font-weight: bold;
+   }
+   .features-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+   }
+   .feature-icon .fa-shield-halved{
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    line-height: 80px;
+    border-radius: 10px;
+    color: #0bead4;
+    border: 1px solid #10e2e2;
+   }
+   .feature-text p{
+    padding: 0 20px;
+    text-align: initial;
+   }
+   .feature-icon .fa-hand-fist{
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    line-height: 80px;
+    border-radius: 10px;
+    color: #0bead4;
+    border: 1px solid #10e2e2;
+   }
+   .feature-icon .fa-skull-crossbones{
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    line-height: 80px;
+    border-radius: 10px;
+    color: #0bead4;
+    border: 1px solid #10e2e2;
+   }
+/*--service---*/
+
+#service{
+    width: 100%;
+    padding: 70px 0;
+    background-color: #070707;
+    background-image: linear-gradient(rgb(59, 205, 205,0.2),rgb(5, 5, 5,0.5),rgba(65, 186, 182,0.2 ));
+}
+.service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.single-service{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.single-service img{
+    width:500px;
+    border-radius: 7px;
+    
+}
+#section3{
+    margin: auto;
+    padding: 10%;
+    background-color: #000000;
+    color: white;
+    background-image: linear-gradient(rgb(59, 205, 205,0.2),rgb(5, 5, 5,0.5));
+}
+.check{
+    width:100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(17, 19, 19, 0.837),rgba(6, 51, 50, 0.618)),url(bg1.jpg);
+            background-size: cover;
+            background-position: center;
+}
+.footer{
+    width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+.footer h1{
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    
+    margin-top: 80px;
+    font-size: 500%;
+    text-align: center;
+text-decoration: none;
+    cursor: pointer;
+}
+.footer h1::after{
+    content: '';
+        height: 5px;
+        width: 0;
+        background: #e60000;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+}
+.footer h1:hover::after{
+    width: 100%;
+}
+</style>
+<body>
+    <div class="banner">
+        
+           <div class="navbar">
+    <img src="logo.png" class="logo">
+    <ul>
+        <li><a href="#">Mark I</a></li>
+        <li><a href="#">Hulkbuster armor</a></li>
+        <li><a href="#">Silver centurion</a></li>
+        <li><a href="#">Mark IV</a></li>
+        <li><a href="#">Inferno armor</a></li>
+    </ul>
+    </div>
+    <div class="content">
+        <h1>WELCOME BACK TONY STARK</h1>
+        <p>CHOOSE YOUR ARMOR FOR NEXT BATTLE</p>
+      <div>
+       
+        <button type="button"><span></span> NEXT SCEDULE</button>
+        <button type="button"><span></span>E.D.I.T.H</button>
+      </div>
+    </div>
+   </div>
+    <!--Features-->
+    <section id="feature">
+        
+        <div class="title-text">
+           
+            <p>Feature</p>
+            <h1>Mark 117 STEALTH</h1>
+        </div>
+        <div class="feature-box">
+              <div class="features">
+                <h1>Principles</h1>
+                    <div class="features-desc">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p> The Mark 117 STEALTH integrates principles commonly used in stealth aircraft and other anti-radar-detection systems, as well as color camouflaging technology, and is primarily used for sensor invisibility.</p>
+                        </div>
+                    </div>
+                    <h1>Capabilities</h1>
+                    <div class="features-desc">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-hand-fist"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p>The armor features several angled surfaces, as well as radar absorbent materials, that make it virtually invisible to enemy early-warning systems.</p>
+                        </div>
+                    </div>
+                    <h1>Weapons</h1>
+                    <div class="features-desc">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-skull-crossbones"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p><ul>
+                                <li>Replusors</li>
+                                <li>Actual Holographic Displays</li>
+                                <li>Exotic Materials</li>
+                                <li>Strength Actuators</li>
+                                <li>Laser Missile</li>
+                            </ul></p>
+                        </div>
+                    </div>
+              </div>
+              <div class="features-img">
+                <img src="stealth.jpg">
+        </div>
+    </section>
+
+<!--service-->
+
+<section id="service">
+    <div class="title-text">
+            
+        <p>Confidential access</p>
+        <h1>Control Center</h1>
+    </div>
+  <div class="service-box">
+      <div class="single-service">
+        <img src="arc.jpg">
+      </div>
+      <div class="single-service">
+        <img src="sat.jpg">
+      </div>
+      <div class="single-service">
+        <img src="stark_ind.jpg">
+      </div>
+      <div class="single-service">
+        <img src="confidential.jpg">
+      </div>
+      
+  </div>
+
+</section>
+<section id="section3">
+    <div class="check">
+    <div class="footer">
+      <h1>Test program for a reason </h1><br><h2>simple program by youtube</h2>
+      
+    </div>
+</div>
+</section>
+</body>
+</html>
